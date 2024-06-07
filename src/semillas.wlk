@@ -15,7 +15,7 @@ class Menta inherits Planta {
 }
 
 class Soja inherits Planta{
-	override method horasDeSolToleradas() = if(altura > 0.5) 6 else if(altura.between(0.5, 1)) 7 else 9
+	override method horasDeSolToleradas() = if(altura < 0.5) 6 else if(altura.between(0.5, 1)) 7 else 9
 	override method nuevaSemilla() = anioDeLaSemilla > 2007 and altura > 1
 	override method espacioOcupado() = altura / 2 
 }
